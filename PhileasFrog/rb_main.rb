@@ -22,6 +22,11 @@
 # do that here too.
 framework 'Cocoa'
 framework 'QuartzCore'
+begin
+  # for OSX 10.8
+  framework 'CoreGraphics'
+rescue
+end
 
 puts NSBundle.mainBundle.localizations
 

@@ -9,6 +9,12 @@
 # Loading the Cocoa framework. If you need to load more frameworks, you can
 # do that here too.
 framework 'Cocoa'
+begin
+  # for OSX 10.8
+  framework 'CoreGraphics'
+rescue
+end
+  
 
 # Loading all the Ruby project files.
 dir_path = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
